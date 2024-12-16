@@ -7,6 +7,7 @@
 .container {
     outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
     margin: 0 auto;
+    max-width: 100%;
     width: 100%;
     /* 📍 Максимальная ширина для контейнера */
 }
@@ -31,14 +32,19 @@ header span {
     background-color: #fafaff;
     padding: 60px 0;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
 
 .main-section .wrapper {
+    display: flex;
+    align-items: center;
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
 }
 
 .text-wrapper {
+    max-width: 425px;
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
 
@@ -63,6 +69,10 @@ header span {
 }
 
 .about-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
@@ -81,11 +91,14 @@ select {
 
 select:hover,
 .text-field:hover {
+    cursor: pointer;
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
 .info-wrapper {
+    display: flex;
+    flex-grow: 1;
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
 }
 
@@ -102,6 +115,9 @@ select:hover,
 
 .frameworks-list,
 .books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
     /* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
@@ -113,10 +129,16 @@ select:hover,
 }
 
 .skills-block {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+   
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
 }
 
 .skills {
+    display: flex;
+    flex-direction: column;
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
@@ -159,6 +181,8 @@ form {
 }
 
 .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
     /* 📍 Стили для кнопки при наведении курсора */
 }
 
@@ -181,6 +205,7 @@ th, td {
 footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
+    text-align: center;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
@@ -192,5 +217,6 @@ footer {
 }
 
 .footer-link:hover {
+   text-decoration: underline; 
     /* 📍 Стили для ссылки при наведении курсора */
 }
