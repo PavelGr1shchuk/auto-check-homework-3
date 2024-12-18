@@ -154,7 +154,8 @@ select:hover,
     font-size: 16px;
 }
 
-form {
+form { display: flex;
+    gap: 5px;
     margin-bottom: 40px;
 }
 
